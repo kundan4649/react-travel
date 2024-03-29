@@ -1,0 +1,79 @@
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.test {
+  height: 800px;
+}
+.pageTitle{
+  font-size: 50px;
+  line-height: 1.4;
+}
+.animated-1s {
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+.airlines {
+  display: block;
+  margin-top: 60px;
+}
+
+.arlist {
+  gap: 0 80px;
+  margin: 0;
+  display: flex;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+}
+
+.arlist>span[title=airline_logos] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: auto;
+  margin: auto -8px;
+  gap: 20px 33px;
+}
+
+.arlinesList_item {
+  opacity: .5;
+  width: calc(33.33% - 33px);
+  text-align: center;
+}
+
+.arlinesList_other {
+  text-wrap: nowrap;
+  width: auto;  
+  color: hsla(0, 0%, 100%, .4);
+  text-transform: uppercase;
+  font-size: 11px;
+  text-align: center;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
