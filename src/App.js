@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Hello from './components/Hello';
+import Home from './Modules/Home/Home';
+
 function App() {
   return (
     <div className="App" >
      
        {/*  <header className="App-header"><img src={logo} className="App-logo" alt="logo" /> </header>*/}
-       <Hello/>
+       <Home/>
         <p>
          
         </p>

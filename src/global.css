@@ -1,15 +1,15 @@
 .video-background {
   position: relative;
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
+  height: 700px;
   overflow: hidden;
 }
-.test {
-  height: 800px;
-}
+
 .pageTitle{
   font-size: 50px;
   line-height: 1.4;
+  text-align: center;
 }
 .animated-1s {
   animation-duration: 1s;
@@ -24,7 +24,7 @@
 }
 
 .arlist {
-  gap: 0 80px;
+  gap: 0 20px;
   margin: 0;
   display: flex;
     /*flex-wrap: wrap;*/
@@ -76,4 +76,351 @@
   transform: translate(-50%, -50%);
   color: white;
   z-index: 1;
+  width: 80%;
+}
+
+.flight-search-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  width: 80%;
+}
+#ddlToAirport , #ddlFromAirport{
+width: auto!important;
+background-color: #fff;
+}
+
+#ddlToAirport a, #ddlFromAirport a {
+  color: #8e8e8e;
+}
+.form-wrapper {
+  z-index: 2;
+  margin: 0 auto;
+  /*max-width: 1266px;*/
+  padding: 155px 0 0;
+  position: relative;
+  display: flex;
+}
+.animated-1_5s {
+  animation-delay: 1.5s;
+  animation-duration: calc(1s);
+  animation-fill-mode: both;
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+.flight-type {
+  margin-top: 5px;
+  margin: 25px 0 20px;
+}
+.flight-type-radio {
+  height: 100%;
+  font-size: .857rem;
+  display: flex;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+/* input {
+  -webkit-appearance: none; 
+}
+*/
+.flight-type input:checked+label {
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+.react-search-form label {
+  padding-right: 15px;
+  color: #8e8e8e;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 10px;
+}
+.react-search-form input, select {
+  border: none;
+  padding-top: 1px !important;
+  padding-bottom: 5px !important;
+}
+@media screen and (min-width: 1025px){
+.search-form .search-form-inputs {
+  flex-wrap: nowrap;
+}
+}
+
+@media screen and (min-width: 768px){
+.search-form .search-form-inputs {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+}
+
+.search-form .search-form-inputs {
+  /*flex-direction: column;*/
+  display: flex;
+}
+
+@media screen and (min-width: 1025px){
+ .calendar-inputs, .trip-inputs {
+    width: auto;
+    margin-bottom: 0;
+}
+}
+.search-form .trip-inputs{
+  position: relative;
+  flex-grow: 1;
+}
+
+.trip-inputs {
+  display: flex;
+}
+
+.search-form .trip-inputs .input-field{
+  flex-grow: 1;
+  flex-shrink: 1;
+  /*padding-left: 5px;
+  background-color: #fff;*/
+}
+
+.form-wrapper .trip-inputs .direction-arrows {
+  width: 55px;
+  height: 51px;
+  border: 1px solid #e3e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form-wrapper .calendar-inputs{
+  width: auto;
+  margin-bottom: 0;
+  display: flex;
+  position: relative;
+  /*padding-left: 5px;
+  background-color: #fff;*/
+
+}
+
+.search-form .input-label.arrive_date {
+  left: calc(50% + 11px);
+  width: calc(50% - 20px);
+}
+
+
+.calendar-inputs .SingleDatePicker {
+  position: relative;
+  /* display: block; */
+  /* border: none; */
+  /* border-radius: 0; */
+}
+
+.calendar-inputs .SingleDatePickerInput__withBorder {
+  border-radius: 0;
+  border: none;
+  width: 100%;
+}
+
+.SingleDatePickerInput {
+  display: inline-block;
+  background-color: #fff;
+}
+
+.DateInput {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.calendar-inputs .SingleDatePicker .DateInput input {
+  padding: 6px 20px 0 10px;
+  text-align: left;
+  height: 51px;
+  border: 1px solid #e3e3e3;
+  border-right: none;
+  max-width: 100%;
+  width: 100%;
+}
+
+.round-trip-date-style input {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  line-height: 3.6;
+  letter-spacing: .2px;
+  padding: 0 20px 0 10px;
+  text-align: left;
+  height: 51px;
+  border: none;
+  border-right: 1px solid #e3e3e3;
+  opacity: 1;
+}
+.form-wrapper .trip-inputs input {
+  position: relative;
+  margin: 0;
+  background: #fff;
+  letter-spacing: .2px;
+  padding: 0px 20px 0 10px;
+  text-align: left;
+  height: 51px;
+  border: 1px solid #e3e3e3;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+*,:after,:before {
+  box-sizing: border-box;
+  outline: 0
+}
+
+.form-wrapper .round-trip-date-style {
+  display: flex;
+  width: 100%;
+  justify-content: unset;
+}
+
+.search-form .input-label.focused {
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  background: rgba(0, 0, 0, 0);
+  height: 20px;
+}
+
+.search-form .input-label{
+  
+  z-index: 1;
+  position: absolute;
+  width: calc(50% - 20px);
+  left: 10px;
+  height: 26px;
+  text-align: left;
+  background: #fff;
+  -ms-transform: translateY(15px);
+  transform: translateY(15px);
+  transition: transform .4s ease-in;
+}
+
+.search-form .input-label label, .search-form-inputs-portal .input-label label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #8e8e8e;
+  font-size: 10px;
+}
+
+
+.form-wrapper .travel-select {
+  width: 160px;
+  height: 51px;
+}
+
+.travel-select {
+  position: relative;
+  width: 170px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #dadee0;
+}
+
+.form-wrapper .search-form .search-actions {
+  margin: 0 0 0 13px;
+  width: auto;
+  flex-shrink: 0;
+  max-width: 200px;
+  display: flex;
+}
+
+.form-wrapper .search-submit {
+  letter-spacing: .1em;
+  font-weight: 600;
+  color: #000;
+  width: 19%;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: #f0cc7f;
+  background-clip: border-box;
+}
+
+.button_skyUIButton__XzLob {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0.7em 2em;
+  border: 2px solid #f0cc7f;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  color: #000;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  --skyUISpinnerRingColor: #000;
+  --skyUISpinnerWaveColor: #000;
+}
+
+.button_skyUIButton__content__ySn_Z {
+  display: flex;
+  align-items: center;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+.react-search-form {
+  display: flex;
+  background: #fff;
+  padding: 4px;
+  margin-right: 15px;
+}
+
+/* DatePicker.css */
+.date-picker-container {
+  display: flex;
+  justify-content: center; /* Center the date picker */
+}
+
+.react-datepicker {
+  width: auto !important; /* Allow the date picker to adjust its width */
+  max-width: 100%; /* Ensure the date picker does not exceed the container's width */
+}
+
+.react-datepicker__month-container {
+  flex-basis: 50%; /* Display two months side by side */
+}
+
+.react-datepicker__month {
+  width: 100%; /* Ensure each month fills the container */
+}
+
+.react-datepicker__header {
+  text-align: center; /* Center the month/year header */
 }
